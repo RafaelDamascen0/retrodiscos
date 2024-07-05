@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozzy Osbourne - No More Tears (1991)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f7f7f7;
+        }
+
+        header {
+            background: #8106d3c7;
+            color: #000000;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        header .cart {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        header .cart img {
+            width: 24px;
+            height: 24px;
+        }
+
+        header .cart-count {
+            background: #000000;
+            border-radius: 50%;
+            padding: 5px 10px;
+            color: #fff;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 100px 20px; /* Add padding to account for fixed header */
+            text-align: center;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .content .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content .add-to-cart {
+            background: #f39c12;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .content .add-to-cart:hover {
+            background: #e67e22;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-media {
+            margin: 20px 0;
+        }
+
+        .social-media a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #ffee00;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCount = document.querySelector('.cart-count');
+            const addToCartButton = document.querySelector('.add-to-cart');
+            
+            addToCartButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const currentCount = parseInt(cartCount.textContent);
+                cartCount.textContent = currentCount + 1;
+                alert('"No More Tears - Ozzy Osbourne (1991)" foi adicionado ao carrinho!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="site.html" style="color: inherit; text-decoration: none;">RetroDiscos</a></div>
+        <nav>
+            <ul>
+                <li><a href="site.html#inicio">Início</a></li>
+                <li><a href="site.html#sobre">Sobre</a></li>
+                <li><a href="site.html#galeria">Galeria</a></li>
+                <li><a href="site.html#contato">Contato</a></li>
+            </ul>
+            <div class="cart">
+                <img src="imagens/carrinho-removebg-preview.png" alt="Carrinho de Compras">
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <img src="imagens/ozzy.jpg" alt="No More Tears - Ozzy Osbourne (1991)">
+        <h1>No More Tears - Ozzy Osbourne (1991)</h1>
+        <p>"No More Tears" é o sexto álbum de estúdio de Ozzy Osbourne, lançado em 1991. O álbum inclui sucessos como "Mama, I'm Coming Home" e "No More Tears".</p>
+        <p class="price">R$ 204,00</p>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+    </div>
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://x.com/home" target="_blank">Twitter</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2024 RetroDiscos. Design By Rafael Damasceno.</p>
+    </footer>
+</body>
+</html>
